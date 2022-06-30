@@ -9,11 +9,12 @@ while (!int.TryParse(Console.ReadLine(), out Num))
 
 System.Console.WriteLine($"Число {Num} удовлетворяет критериям");
 
-if (Num > 999 | Num < 100)
+while (Num > 999 | Num < 100)
 {
     System.Console.WriteLine("Введен некорректное число, введите ТРЕХЗНАЧНОЕ");
+    int.TryParse(Console.ReadLine(), out Num);
 }
-else
+
 {System.Console.WriteLine($"Число {Num} является трехзначным, выполняется вычисление ...");
 
  a = Num % 100;
